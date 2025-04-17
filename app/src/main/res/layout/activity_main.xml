@@ -1,57 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
+    android:layout_height="match_parent">
+
+<LinearLayout
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <!-- Título para mi aplicación -->
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="8dp"
-        android:text="Gestor de Tareas"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <!-- Campo para agregar tareas -->
-    <EditText
-        android:id="@+id/etTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_edittext"
-        android:hint="Agregar nueva tarea"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:padding="8dp"
-        android:textColor="@color/black" />
-
-    <!-- Botón para agregar tarea -->
     <Button
-        android:id="@+id/btnAdd"
+        android:id="@+id/checkBluetooth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/teal_700"
-        android:elevation="4dp"
-        android:text="Añadir tarea"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:text="Verificar Bluetooth"/>
 
-    <!-- Lista de tareas -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listTask"
+    <Button
+        android:id="@+id/toggleBluetooth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:paddingBottom="8dp"
-        android:scrollbars="vertical" />
+        android:text="Activar/Desactivar Bluetooth"/>
 
+    <Button
+        android:id="@+id/pairedDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dispositivos Emparejados"/>
+
+    <Button
+        android:id="@+id/takePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tomar Foto"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Vista previa"/>
+
+    <EditText
+        android:id="@+id/fileNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del archivo"/>
+
+    <Button
+        android:id="@+id/saveFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Archivo"/>
+
+    <TextView
+        android:id="@+id/statusView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado"/>
 </LinearLayout>
+</ScrollView>
